@@ -23,10 +23,10 @@ $(function () {
 			if (!$(this).hasClass("on")) {
 				$(this).addClass("on");
 				$(this).html(nav_off)
-				$('html, body').addClass('hidden');
+				// $('html, body').addClass('hidden');
 				$(".main_nav").fadeIn();
 			} else {
-				$('html, body').removeClass('hidden');
+				// $('html, body').removeClass('hidden');
 				$(this).removeClass("on")
 				$(this).html(nav_on)
 				$(".main_nav").fadeOut();
@@ -56,6 +56,17 @@ $(function () {
 		});
 	})
 	 
+	$(".green").click(function(){
+		var g_con = $(this).parent().siblings('.green_con')
+		if (!$(this).hasClass("on")) {
+			g_con.show();
+			$(this).addClass("on");
+		}else{
+			g_con.hide();
+			$(this).removeClass("on");
+		}
+		
+	});
 	 
 	
 })
