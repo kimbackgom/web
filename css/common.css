@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+
+@font-face {
+  font-family: 'NotoSansKr';
+  font-weight: normal;
+  src: url(../font/NotoSans-Regular.eot);
+  src: url(../font/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../font/NotoSans-Regular.woff2) format('woff2'),
+    url(../font/NotoSans-Regular.woff) format('woff'),
+    url(../font/NotoSans-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSansKr';
+  font-weight: 300;
+  src: url(../font/NotoSans-Medium.eot);
+  src: url(../font/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+    url(../font/NotoSans-Medium.woff2) format('woff2'),
+    url(../font/NotoSans-Medium.woff) format('woff'),
+    url(../font/NotoSans-Medium.otf) format('truetype');
+}
+@font-face {
+  font-family: 'NotoSansKr';
+  font-weight: 200;
+  src: url(../font/NotoSans-Light.eot);
+  src: url(../font/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+    url(../font/NotoSans-Light.woff2) format('woff2'),
+    url(../font/NotoSans-Light.woff) format('woff'),
+    url(../font/NotoSans-Light.otf) format('truetype');
+}
+@font-face {
+  font-family: 'NotoSansKr';
+  font-weight: bold;
+  src: url(../font/NotoSans-Bold.eot);
+  src: url(../font/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../font/NotoSans-Bold.woff2) format('woff2'),
+    url(../font/NotoSans-Bold.woff) format('woff'),
+    url(../font/NotoSans-Bold.otf) format('truetype');
+}
+@font-face {
+  font-family: 'NotoSansKr';
+  font-weight: 100;
+  src: url(../font/NotoSans-Thin.eot);
+  src: url(../font/NotoSans-Thin.eot?#iefix) format('embedded-opentype'),
+    url(../font/NotoSans-Thin.woff2) format('woff2'),
+    url(../font/NotoSans-Thin.woff) format('woff'),
+    url(../font/NotoSans-Thin.otf) format('truetype');
+}
+
+
+/* reset */
+html { -ms-touch-action: manipulation; touch-action: manipulation; }
+body {	font-family: "Open Sans",	"NotoSansKr",	sans-serif;	word-break: break-all;	word-wrap: break-word;	word-break: keep-all;	overflow-x: hidden;	}
+  body::after{content:""; display:block; clear:both;}
+html, body {  -webkit-overflow-scrolling: touch; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button { margin: 0; padding: 0; -webkit-text-size-adjust: none; }
+fieldset, img, abbr, acronym { border: 0 none; }
+img { max-width: 100%; vertical-align: top; }
+legend { position: absolute; height: 0; line-height: 0; font-size: 0; overflow: hidden; margin: 0; padding: 0; }
+address, caption, cite, code, dfn, em, var { font-style: normal; font-weight: normal; }
+ol, ul { list-style: none; }
+q:before, q:after { content:''; }
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+caption { display: table-caption; width: 0; height: 0; line-height: 0; font-size: 0; overflow: hidden; text-align: left; }
+select {
+  -webkit-border-radius: 0;
+  font-family: "NotoSansKr";
+}
+textarea { overflow: hidden; resize: none; }
+select:focus,
+input:focus,
+a:focus,
+button:focus { outline-color: #2068d3; outline-offset: -1px; }
+textarea:focus { outline: none !important;}
+a {  text-decoration: none; cursor: pointer; color: #222; display: block;}
+button {
+  font-family:"NotoSansKr";
+  border: 0 none;
+  background: none;
+  cursor: pointer;
+}
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea,
+input[type="text"] { border-radius: 0; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] { cursor: pointer; overflow: visible; -webkit-appearance: button; }
+input[type="checkbox"],
+input[type="radio"] { width: 14px; height: 14px; line-height: 14px; box-sizing: border-box; -webkit-border-radius: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+input::placeholder {
+  color: #a6a6a6;
+}
+/* html5 태그*/
+header, footer, article, section, aside, details, figure, figcaption, nav, hgroup { display: block; margin: 0; padding: 0; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* box-sizing */
+* { box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+/* clear */
+.clear {clear:both;}
+.clear:after { content:""; display:block; clear:both;}
+
+
+
+
+
+select::-ms-expand {
+  display: none
+}
