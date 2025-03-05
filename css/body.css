@@ -1,0 +1,194 @@
+
+
+/* ===================================
+    Google font
+====================================== */
+
+
+/* ===================================
+    Reset
+====================================== */
+
+
+
+
+* {margin:0px; padding:0px;}
+body{ font-family: 'SUIT Variable', sans-serif; -webkit-font-smoothing: antialiased;  
+font-smoothing: antialiased; font-size:21px; color:white;}
+body, html { width:1080px; height: 1920px; -moz-osx-font-smoothing: grayscale; background: linear-gradient(200deg, #75ACFF 0%, #06F 65.6%); background-repeat: no-repeat; background-size:cover}
+a, a:active, a:focus { color: #ffffff; text-decoration: none; }
+a:hover, a:active{text-decoration: none;}
+a:focus, a:active, button:focus, button:active,.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;}
+img {max-width:100%; height:auto; }
+video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
+
+iframe { border: 0;}
+p {margin: 0 0 25px}
+b, strong { font-weight: 600;}
+.last-paragraph-no-margin p:last-of-type {margin-bottom:0}
+.alt-font strong {font-weight: 700 }
+ul, ol, dl {list-style-position: outside; margin-bottom: 25px}
+*{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s;}
+*:hover{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; }
+::selection { color: #ffffff; background:#dbdbdb; }
+::-moz-selection { color:#ffffff; background:#dbdbdb; }
+::-webkit-input-placeholder { color: #ffffff; text-overflow: ellipsis;}
+::-moz-placeholder { color: #ffffff; text-overflow: ellipsis; opacity:1;} 
+:-ms-input-placeholder { color: #ffffff; text-overflow: ellipsis; opacity:1;}
+small{font-size: 70%;}
+.text-center {text-align:center;}
+.position-relative {position:relative!important;}
+.position-absolute {position:absolute!important;}
+.display-inline-block {display:inline-block}
+.text-blue {color:#70ECFF;}
+.text-white {color:#ffffff!important;}
+.text-italic {font-style:italic}
+.text400 {font-weight:400}
+.padding50 {padding:0 50px; box-sizing: border-box;}
+
+
+.wrap {width:100%; height:1920px; position:relative;}
+.loading{position: absolute;width: 100%;height: 100%;}
+.inner{display: flex;width: 100%;height: 100%;align-items: flex-start;justify-content: center;background: rgba(0, 0, 0, 0.24);padding-top: 430px;}
+.inner svg,.inner svg *{transition-duration: 0s;-webkit-transition-duration: 0s;}
+/**----------- Header -------------**/
+header {width:100%; height:170px; padding:20px 50px; margin:0px; overflow:hidden;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) -40.29%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.header_info {float:left; width:50%}
+
+.w_info01 {display:inline-block}
+.w_info01 img.left {padding:0px; margin-bottom:-20px} 
+.w_info01 .right {display:inline-block; margin-left:4px; margin-right:50px}
+.w_info01 .right h2 { font-size:60px; font-weight:800;}
+.w_info01 .right h2 span {font-size:40px;}
+.w_info01 .right p {font-weight:700; font-size:26px;}
+
+.w_info02 {display:inline-block; font-size:28px; font-weight:700;}
+.w_info02 p {padding:12px 0px; margin:0px }
+.w_info02 p:first-child {border-bottom: 1px solid rgba(255, 255, 255, 0.4) }
+.w_info02 .time_sun {font-weight:900; color:#FFE600; margin-left:14px}
+
+
+.header_btn {float:right; width:50%; height:100%; text-align:right;
+    box-sizing: border-box; padding-top:28px}
+
+.icon_place {margin-bottom:-5px; margin-right:4px;}
+.btn {width:134px; height:70px; display:inline-block; font-size:28px; margin-left:8px; padding:0px;
+    text-align:center;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0.50);
+    font-family: 'SUIT Variable', sans-serif; color:#ffffff; font-weight:700;
+    border-radius: 50px; 
+    cursor:pointer;}
+.btn:active ,.btn.on {border: 1px solid #E55F00; /* 마우스 클릭하고있을때 */
+    background: #EE7200; 
+    } 
+.btn:first-child {margin-left:0px;}
+
+
+
+
+/**----------- Contents -------------**/
+.weather_graph {margin-top:10px; height:274px; width:100%;
+    box-sizing: border-box;
+    background: rgba(0,0,0, 0.3);
+    border-radius: 50px;
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/padding: 30px 33px;}
+    .graph{
+        display: block;
+        width: 100%;
+        height: 190px;
+    }
+    #graph{width: 100%;height: 100%;}
+    .graph-inner{
+        position: relative;
+
+    }  
+    .graph-time{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    } 
+     .graph-time li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 76px;
+        font-size: 21px;
+        font-family: 'SUIT Variable', sans-serif;
+     }
+
+    /*-- 그래프 --*/
+    .quiz-chartTip {
+        padding: 5px 10px;
+        /*border: 1px solid rgba(0,0,0,.1);*/
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.9);
+        /*box-shadow: 3px 3px 10px rgba(0,0,0,.1);*/
+        position: absolute;
+        z-index: 50;
+        max-width: 250px;}
+
+    .quiz-graph {
+        padding: 15px; 
+        height: 370px;
+        width: 100%;}
+
+    .quiz-graph .x-labels {
+        text-anchor: middle;
+        font-weight:600;
+        color:#ffffff!important}
+    .quiz-graph .x-labels text {color:#ffffff!important}
+
+    .quiz-graph .y-labels {
+        text-anchor: end;
+        font-weight:600}
+
+    .quiz-graph .quiz-graph-grid {
+        stroke: #ccc;
+        stroke-dasharray: 0;
+        stroke-width: 1;}
+
+    .label-title {
+        text-anchor: middle;
+        text-transform: uppercase;
+        font-size: 12px;
+        fill: white;}
+
+    .quiz-graph-dot, .quiz-graph-start-dot{
+        fill:#ffffff;
+        /*stroke-width: 2;
+        stroke: #001B42;*/}
+
+
+.weather_table {margin-top:30px; width:100%; padding:25px;
+    box-sizing: border-box;
+    background: rgba(0,0,0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/}
+.weather_table table {width:100%; font-family: 'SUIT Variable', sans-serif;
+    border-collapse: collapse;}
+.weather_table table tr {padding:0px}
+.weather_table table tr td,.weather_table table tr th {text-align: center; color:white; font-size:20px;
+    padding:6px 0px; 
+    text-shadow: 2px 2px 25px rgba(0,0,0,0.5);}
+.weather_table table tr:first-child td ,.weather_table table tr:first-child th{
+    border-bottom:1px solid rgba(255,255,255,0.5);
+    padding-bottom:10px;}
+.weather_table table tr:nth-child(2) td {padding-top:12px}
+.weather_table table tr:last-child td {padding-bottom:12px}
+.weather_table table tr th:first-child {width:9%; font-weight:700}
+
+
+.info {position:absolute; left:0px; bottom:-8px; width:100%; overflow:hidden}
+.info .info_top{background:#ffffff; 
+    border-top-left-radius: 60px; 
+    border-top-right-radius: 60px;
+    height:60px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.40);
+    margin-top:52px}

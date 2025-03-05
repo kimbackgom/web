@@ -1,158 +1,222 @@
-<!DOCTYPE html>
-<html lang="kr">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=1080, user-scalable=yes">
-  <link rel="stylesheet" href="./css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/mobile.css">
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/mobile.js"></script>
-  <title>ScienceON</title>
-</head>
-<body class="">
-  <header>
-    <button class="m_nav_btn">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
-    
-    <h1><a href="#;"><img src="./img/m_logo_s.png" alt="ScienceON"></a></h1>
-    <a href="#;" class="log_in">
-      <i class="fa fa-power-off" aria-hidden="true"></i>
-    </a>
-  </header>
+<!doctype html>
+<html class="no-js" lang="ko">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="./css/body.css" />
+        <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet"><!--SUIT웹폰트-->
+        <script src="./js/chart.js"></script>
+       <style>
+            g.x-labels text{color:white!important;}
+       </style>
+        <!-- title -->
+        <title>식당식수인원인식_키오스크UXUI디자인</title>
+    </head>
+    <body id="body" style="background-image:url('./images/bg_sunny.png'); background-size:cover;"><!--날씨 배경 변경-->
+        <div class="wrap">
+            <div class="loading">
+                <div class="inner">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                <circle cx="24" cy="24" r="20" fill="none" stroke="#75ACFF" stroke-width="5" />
+                <circle cx="24" cy="24" r="20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round">
+                  <animate attributeName="stroke-dasharray" values="1, 200; 89, 200; 89, 200" dur="4s"
+                    repeatCount="indefinite" />
+                  <animate attributeName="stroke-dashoffset" values="0; -35; -124" dur="4s" repeatCount="indefinite" />
+                </circle>
+              </svg>
+                </div>
+                
+            </div>
+            <!-- s: header -->
+            <header>
+                <div class="header_info">
+                    <div class="w_info01">
+                        <img src="" class="left" id="icon"><!--날씨 아이콘-->
+                        <div class="right">
+                            <h2><span id="temp"></span><span class="">℃</span></h2>
+                            <p id="text"></p>
+                        </div>
+                    </div>
+                    <div class="w_info02">
+                        <p class="display-inline-block">일출<span class="time_sun" id="sunrise"></span></p>
+                        <p class="">일몰<span class="time_sun" id="sunset"></span></p>
+                    </div>
+                </div>
+                <div class="header_btn">
+                    <img src="./images/icon_place.png" class="icon_place">
+                    <button class="btn on" data-num="1">서초구</button>
+                    <button class="btn" data-num="2">강남구</button>
+                    <button class="btn" data-num="3">송파구</button>
+                </div>
+            </header>
+            <!-- e: section -->
+        
+            <!-- s: section 날씨그래프-->
+            <section class="padding50">
+                <div class="weather_graph">
+                    <div class="graph-inner">
+                        <div class="graph">
+                            <canvas id="graph"></canvas>
+                        </div>
+                        <ul class="graph-time">
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                        </ul>
+                    </div>
+                   
 
-  <nav class="main_nav">
-    <ul>
-      <li>
-        <a href="#;">논문</a>
-      </li>
-      <li>
-        <a href="#;">특허</a>
-      </li>
-      <li>
-        <a href="#;">보고서</a>
-      </li>
-      <li>
-        <a href="#;">동향</a>
-      </li>
-      <li>
-        <a href="#;">SNS</a>
-      </li>
-      <li>
-        <a href="#;">About</a>
-      </li>
-      <li>
-        <a href="#;">BOARD</a>
-      </li>
-      <li>
-        <a href="#;">즐겨찾기</a>
-      </li>
-      <li>
-        <a href="#;">로그인</a>
-      </li>
-      <li>
-        <a href="#;">회원가입</a>
-      </li>
-    </ul>
-  </nav>
+                </div>
+            </section>
+            <!-- e: section 날씨그래프 -->
 
-  <section class="main_wrap">
-    <div class="search_box">
-      <div class="input_wrap">
-        <input type="text" placeholder="검색어를 입력하세요">
-        <button>
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-    <ul class="sub_nav">
-      <li>
-        <a href="#;" class="">About</a>
-      </li>
-      <li>
-        <a href="#;" class="">BOARD</a>
-      </li>
-      <li>
-        <a href="#;" class="">논문</a>
-      </li>
-      <li>
-        <a href="#;" class="">특허</a>
-      </li>
-      <li>
-        <a href="#;" class="">보고서</a>
-      </li>
-      <li>
-        <a href="#;" class="">동향</a>
-      </li>
-      <li>
-        <a href="#;" class="">SNS</a>
-      </li>
-    </ul>
-    <ul class="box_menu">
-      <li>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon1.png">
-          </p>
-          <span>개요 11</span>
-        </a>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon2.png">
-          </p>
-          <span>추진방향</span>
-        </a>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon3.png">
-          </p>
-          <span>서비스 목표</span>
-        </a>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon4.png">
-          </p>
-          <span>주요기능</span>
-        </a>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon5.png">
-          </p>
-          <span>제공콘텐츠</span>
-        </a>
-        <a href="#;">
-          <p>
-            <img src="./img/about_icon6.png">
-          </p>
-          <span>지식인프라 소개</span>
-        </a>
+            <!-- s: section 날씨표-->
+            <section class=" padding50">
+                <div class="weather_table">
+                    <table>
+                        <tr class="table-time">
+                            <th>시간</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-temp">
+                            <th>기온</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-PTY">
+                            <th>날씨</th>
+                            <td><img src=""></td><!--(스몰)날씨 아이콘-->
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                            <td><img src=""></td>
+                        </tr>
+                        <tr class="table-REH">
+                            <th>습도</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-POP">
+                            <th>강수확률</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-PCP">
+                            <th>강수량</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-SNO">
+                            <th>적설량</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-WSD">
+                            <th>풍속</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- e: section 날씨표 -->
+            
+            <!-- s: section 정보 안내-->
+            <section class="info">
+                <div class="info_top"></div>
+                <img src="./images/img_infomation_bt.png">
+            </section>
+            <!-- e: section 정보 안내-->
+        </div>
+    </body>
 
-      </li>
-    </ul>
-  </section>
+    <script src="./js/weather.js"></script>
 
-  <footer>
-    <ul>
-      <li>
-        <a href="#;">로그인</a>
-      </li>
-      <li>
-        <a href="#;">PC버전</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <a href="#;">개인정보처리방침</a> 
-      </li>
-      <li>
-        <a href="#;">이용약관</a>
-      </li>
-      <li>
-        <a href="#;">이메일무단수집 거부</a>
-      </li>
-    </ul>
-    <p class="copyright">Copyright KISTI. All Rights Reserved.</p>
-  </footer>
-</body>
 </html>
